@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    color: #333;
+    background-color: #faf9f7;
+}
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0% auto;
+}
+.navbar h1 {
+    color:rgb(144, 153, 154)
+}
+.navbar a {
+    margin-left: 28px;
+    text-decoration: none;
+    padding: 6px;
+}
+.contact-tab {
+    margin-right: 35px;
+    padding: 15px;
+}
