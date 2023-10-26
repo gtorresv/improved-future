@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import About from './pages/About'
 import Navbar from './components/Navbar'
 import Portfolio from './pages/Portfolio';
@@ -7,24 +6,22 @@ import Resume from './pages/Resume';
 import Footer from './components/Footer'
 
 function App() {
-  const [currentPage, setCurrentpage] = useState('home');
-  const onPageChange = () => {
-    if (currentPage === 'about') {
-      return <About />
-    } else if (currentPage === 'portfolio') {
-      return <Portfolio />
-    } else if (currentPage === 'contact') {
-      return <Contact />
-    } else if (currentPage === 'resume') {
-      return <Resume />
-    }
-  }
   return (
-    <div>
-      <Navbar setCurrentpage={setCurrentpage}/>
-      {onPageChange()}
-      <Footer setCurrentpage={setCurrentpage}/>
-      {onPageChange()}
+    <div className='App'>
+      <Navbar />
+      <div className='about-section'>
+        <About />
+      </div>
+      <div className='about-section'>
+        <Portfolio />
+      </div>
+      <div className='about-section'>
+        <Resume />
+      </div>
+      <div className='about-section'>
+        <Contact />
+      </div>
+      <Footer />
     </div>
   )
 }
